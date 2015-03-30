@@ -1,0 +1,25 @@
+<div class="panel panel-orange">
+  <div class="panel-heading">
+    <h3><span>Footprint and Expenditure History</span></h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th><a ng-click="reverse=!reverse;order('date', reverse)">Date</a></th>
+          <th><a ng-click="reverse=!reverse;order('name', reverse)">Shop name</a></th>
+          <th><a ng-click="reverse=!reverse;order('category', reverse)">Category</a></th>
+          <th><a ng-click="reverse=!reverse;order('region', reverse)">Region</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="shop in shops">
+          <td>{{shop.date}}</td>
+          <td><a href="shop.html#/{{shop.name}}">{{shop.name}}</a></td>
+          <td><a ng-href="footprint.html#/map/{{shop.category}}">{{shop.category}}</a></td>
+          <td>{{shop.region}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

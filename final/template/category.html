@@ -1,0 +1,205 @@
+<div class="row">        
+  <!-- Sidebar Start-->
+  <aside class="span3">
+   <!-- Category-->  
+    <div class="sidewidt">
+      <h2 class="heading2"><span>Categories</span></h2>
+      <ul class="nav nav-list categories">
+        <li ng-repeat="category in categories">
+          <a ng-href="category.html#/{{category.name}}">{{category.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidewidt">
+      <h2 class="heading2"><span>Popular</span></h2>
+      <div class="sideblog">
+        <div id="popular" class="tab-pane active">
+          <ul style="margin-left:0px;">
+            <li ng-repeat="article in articles |filter:5:article.date" style="padding-bottom:8px;">
+              <img class="sideblogimage" width="100" height="100" src="{{article.image}}" alt="{{article.article_name}}" title="{{article.article_name}}">
+              <a class="blogtitle" href="article.html#/{{article.article_name}}"><b>{{article.article_name}}</b></a>&nbsp;
+              <br/>{{article.article_description.substring(0,50)+ '...'}}
+              &nbsp;&nbsp;
+              <a href="article.html#/{{article.article_name}}"><b>read more</b></a>
+              <div>
+                <span class="mr10"><i class="icon-calendar"></i>{{article.date}}</span>
+                <span class="mr10"><a href="shop.html#/{{article.shopname}}"><i class="icon-shopping-cart"></i>Shop</a>
+                </span>
+              </div>
+              <div style="clear:both;"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sidewidt">
+      <h2 class="heading2"><span>Tags</span></h2>
+      <ul class="tags">
+        <li ng-repeat="tag in tags"><a href="tag.html#/{{tag}}"><i class="icon-tag"></i>{{tag}}</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- Sidebar End-->
+  <!-- Category-->
+  <div class="span9">          
+    <!-- Category Products-->
+    <section id="category">
+      <div class="row">
+        <div class="span9">
+         <!-- Sorting-->
+
+          <ul >       
+          <li class="userlogin" style="float:left;"> <input type="text" placeholder="Search" Search" id="inputIcon" class="span2" style="width:100%;">
+        <div style="margin:0px 289px;">
+          <li><button type="button" class="btn btn-danger" type="submit">Search</button>
+          </li>
+          
+      </ul>
+          <div class="sorting well">
+            <form class="form-inline pull-left">
+              Sort By :
+              <select class="span2">
+                <option>Default</option>
+                <option>Name</option>
+                <option>Pirce</option>
+                <option>Rating </option>
+                <option>Color</option>
+              </select>
+              &nbsp;&nbsp;
+              Show:
+              <select class="span1">
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+              </select>
+            </form>
+            <div class="btn-group pull-right">
+      
+            </div>
+          </div>
+         <!-- Category-->
+          <section id="categorygrid">
+            <ul class="thumbnails grid">
+              <li class="span3" ng-repeat="shop in shops" style="height: 230px;">
+                <a class="prdocutname" href="shop.html#/{{shop.name}}">{{shop.name}}</a>
+                <div class="thumbnail">
+                  <a href="shop.html#/{{shop.name}}"><img alt="" src="{{shop.image}}"></a>
+                </div>
+              </li>
+            </ul>
+            <ul class="thumbnails list row">
+              <li>
+                <div class="thumbnail">
+                  <div class="row">
+                    <div class="span3">
+                      <span class="offer tooltip-test" >Offer</span>
+                      <a href="#"><img alt="" src="img/product1.jpg"></a>
+                    </div>
+                    <div class="span6">
+                      <a class="prdocutname" href="product.html">Product Name Here</a>
+                      <div class="productdiscrption"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.<br>
+                        <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan </div>
+                      <div class="pricetag">
+                        <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
+                        <div class="price">
+                          <div class="pricenew">$4459.00</div>
+                          <div class="priceold">$5000.00</div>
+                        </div>
+                      </div>
+                      <div class="shortlinks">
+                        <a class="details" href="#">DETAILS</a>
+                        <a class="wishlist" href="#">WISHLIST</a>
+                        <a class="compare" href="#">COMPARE</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="thumbnail">
+                  <div class="row">
+                    <div class="span3">
+                      <span class="offer tooltip-test" >Offer</span>
+                      <a href="#"><img alt="" src="img/product1.jpg"></a>
+                    </div>
+                    <div class="span6">
+                      <a class="prdocutname" href="product.html">Product Name Here</a>
+                      <div class="productdiscrption"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.<br>
+                        <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan </div>
+                      <div class="pricetag">
+                        <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
+                        <div class="price">
+                          <div class="pricenew">$4459.00</div>
+                          <div class="priceold">$5000.00</div>
+                        </div>
+                      </div>
+                      <div class="shortlinks">
+                        <a class="details" href="#">DETAILS</a>
+                        <a class="wishlist" href="#">WISHLIST</a>
+                        <a class="compare" href="#">COMPARE</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="thumbnail">
+                  <div class="row">
+                    <div class="span3">
+                      <span class="offer tooltip-test" >Offer</span>
+                      <a href="#"><img alt="" src="img/product1.jpg"></a>
+                    </div>
+                    <div class="span6">
+                      <a class="prdocutname" href="product.html">Product Name Here</a>
+                      <div class="productdiscrption"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.<br>
+                        <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stan </div>
+                      <div class="pricetag">
+                        <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
+                        <div class="price">
+                          <div class="pricenew">$4459.00</div>
+                          <div class="priceold">$5000.00</div>
+                        </div>
+                      </div>
+                      <div class="shortlinks">
+                        <a class="details" href="#">DETAILS</a>
+                        <a class="wishlist" href="#">WISHLIST</a>
+                        <a class="compare" href="#">COMPARE</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="pagination pull-right">
+              <ul>
+                <li><a href="#">Prev</a>
+                </li>
+                <li class="active">
+                  <a href="#">1</a>
+                </li>
+                <li><a href="#">2</a>
+                </li>
+                <li><a href="#">3</a>
+                </li>
+                <li><a href="#">4</a>
+                </li>
+                <li><a href="#">Next</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

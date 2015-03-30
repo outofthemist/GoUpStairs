@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="category" ng-controller="CategoryController">
+<head>
+<meta charset="utf-8">
+<title>Category</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'><link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/flexslider.css" type="text/css" media="screen" rel="stylesheet"  />
+<link href="css/jquery.fancybox.css" rel="stylesheet">
+<link href="css/cloud-zoom.css" rel="stylesheet">
+<link rel="shortcut icon" href="assets/ico/favicon.html">
+
+<script src="js/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/application.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script defer src="js/jquery.fancybox.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.tweet.js"></script>
+<script  src="js/cloud-zoom.1.0.2.js"></script>
+<script  type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript"  src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script type="text/javascript"  src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript"  src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript"  src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script defer src="js/custom.js"></script>  
+<script src="controller/footprint.js"></script>
+<script src="controller/category.js"></script>
+<script src="checkloginfunction.js"></script>
+
+</head>
+<body>
+<header>
+  <div class="headerstrip">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <a class="logo pull-left"><img src="img/goupstairs.png" alt="Go Up Stairs"></a>
+
+
+          <!-- Top Nav Start -->
+          <img src="image/goUp.png" alt="Banner" style="width:272px;height:72px" >
+          <div class="pull-right">
+            <div class="navbar" id="topnav">
+              <div class="navbar-inner">
+                <ul class="nav" >
+                  <li><a class="home active" href="index.html">Home</a>
+                  </li>
+                  <li><input id="inputemail" type="text"  href="#" placeholder="Email" >
+                  </li>
+                  <li><input type="password" id="inputpassword" type="text"  placeholder="Password" >
+                  </li>
+                  <li><a class="myaccount" onclick="checkloginfunction()" >Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Top Nav End -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+      <ng-view>
+    </ng-view>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <section class="footersocial">
+    <div class="container">
+      <div class="row">
+        <div class="span3 aboutus">
+          <h2>About Us </h2>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+            <br>
+            t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        </div>
+        <div class="span3 contact">
+          <h2>Contact Us </h2>
+          <ul>
+            <li class="phone"> +123 456 7890, +123 456 7890</li>
+            <li class="mobile"> +123 456 7890, +123 456 78900</li>
+            <li class="email"> test@test.com</li>
+            <li class="email"> test@test.com</li>
+          </ul>
+        </div>
+        <div class="span3 twitter">
+          <h2>Site Map </h2>
+          <div id="SiteMap">
+          <p><a href="index.html">Home Page</a></p>
+          <p><a href="category.html">Category</a></p>
+          <p><a href="coupon.html">Coupon</a></p>
+          <p><a href="footprint.html">Footprint</a></p>
+           <p><a href="shop.html">Shop</a></p>
+          </div>
+        </div>
+        <div class="span3 facebook">
+          <h2>Facebook </h2>
+          <div id="fb-root"></div>
+          <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
+          <script type="text/javascript">FB.init("");</script>
+          <script type="text/javascript">
+//<![CDATA[
+document.write('<fb:fan profile_id="80655071208" stream="0"	connections="6"	logobar="0" height="190px"	width="200"css="css/fb.css"></fb:fan> ');
+//]]>
+</script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footerlinks">
+    <div class="container">
+      <div class="info">
+        <ul>
+          <li><a href="#">Privacy Policy</a>
+          </li>
+          <li><a href="#">Terms &amp; Conditions</a>
+          </li>
+          <li><a href="#">Affiliates</a>
+          </li>
+          <li><a href="#">Newsletter</a>
+          </li>
+        </ul>
+      </div>
+      <div id="footersocial">
+        <a href="#" title="Facebook" class="facebook">Facebook</a>
+        <a href="#" title="Twitter" class="twitter">Twitter</a>
+        <a href="#" title="Linkedin" class="linkedin">Linkedin</a>
+        <a href="#" title="rss" class="rss">rss</a>
+        <a href="#" title="Googleplus" class="googleplus">Googleplus</a>
+        <a href="#" title="Skype" class="skype">Skype</a>
+        <a href="#" title="Flickr" class="flickr">Flickr</a>
+      </div>
+    </div>
+  </section>
+  <section class="copyrightbottom">
+    <div class="container">
+      <div class="row">
+        <div class="span6"> All images are copyright to their owners. </div>
+        <div class="span6 textright"> ShopSimple @ 2012 </div>
+      </div>
+    </div>
+  </section>
+  <a id="gotop" href="#">Back to top</a>
+</footer>
+
+</body>
+</html>

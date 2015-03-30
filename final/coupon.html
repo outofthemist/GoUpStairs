@@ -1,0 +1,617 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>coupon</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="HTML Template best suited for business sites and portfolios" />
+	<meta name="keywords" content="Some keywords that best describe your business" />
+	<meta name="author" content="Creativusmouse" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'><link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/flexslider.css" type="text/css" media="screen" rel="stylesheet" />
+<link href="css/jquery.fancybox.css" rel="stylesheet">
+<link href="css/cloud-zoom.css" rel="stylesheet">
+<link rel="stylesheet" href="files/css/colors.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="controller/category.js"></script>
+<script src="controller/promotion.js"></script>
+<script src="checkloginfunction.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="files/css/foundation.min.css">
+	<link rel="stylesheet" href="files/css/styles.css">
+	<link href="files/titan/css/jquery.titanlighbox.css" rel="stylesheet">
+	<!-- REVOLUTION BANNER CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="files/rs-plugin/css/settings.css" media="screen" />
+
+	<!-- GOOGLE FONT - SOURCE SANS PRO -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet'>
+
+	<!-- JAVASCRIPT FOUNDATION (COMPRESSED) -->
+	<script src="files/js/foundation.min.js"></script>
+	<script src="files/js/modernizr.foundation.js"></script>
+	<script src="files/js/app.js"></script>
+	<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+	<script src="files/js/jquery.min.js"></script>
+
+	<!-- JQUERY KENBURN SLIDER  -->
+	<script src="files/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+	<script src="files/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+	<!-- ANGULARJS-->
+	<script src="files/js/angular.min.js"></script>
+
+	<!-- THEMES PANEL -->
+	<link rel="stylesheet" href="files/themes_panel/farbtastic/farbtastic.css">
+	<link rel="stylesheet" href="files/themes_panel/themes_panel.css">
+	<link rel="stylesheet" href="files/css/colors.css">
+	<style>
+		.coupons {
+			width: 30%;
+			display: inline-block;
+			margin: 5px;
+		}
+		.couponsArea {
+			float: left;
+			width: 80%;
+			position: relative;
+		}
+		.couponsRelated {
+			float: left;
+			width: 20%;
+			position: relative;
+		}
+		.couponsPic {
+			height: 90%;
+		}
+
+		.couponsBottom {
+			height: 90%;
+			position: relative;
+			top: 95%;
+		}
+
+		.couponsPage {
+			float: right;			
+			
+		}
+
+		.couponsSelect {
+			background: #ffffff;
+			border-radius: 5px;
+			padding: 10px 10px 5px 10px;
+			margin: 5px 5px 10px 0px;
+		}
+
+		.couponsSort {
+			background: #ffffff;
+			border-radius: 5px;
+			padding: 10px 10px 5px 10px;
+			margin: 5px 5px 10px 0px;
+		}
+
+		.pageBlock a{
+			display: inline-block;
+			color: white;
+			border: 1px solid #0000CC;
+			width: 35px;
+			height: 35px;
+			font-size: 14px;
+			text-align: center;
+			border-radius: 5px;
+			background-color: #0066CC;
+		}
+		.pageBlock a:hover{
+			background-color: #0033CC;
+
+		}
+	</style>
+</head>
+<body>
+	 <div class="headerstrip">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <a class="logo pull-left"><img src="img/goupstairs.png" alt="Go Up Stairs"></a>
+
+
+          <!-- Top Nav Start -->
+          <img src="image/goUp.png" alt="Banner" style="width:272px;height:72px" >
+          <div class="pull-right">
+            <div class="navbar" id="topnav">
+              <div class="navbar-inner">
+                <ul class="nav" >
+                  <li><a class="home active" href="index.html">Home</a>
+                  </li>
+                  <li><input id="inputemail" type="text"  href="#" placeholder="Email" >
+                  </li>
+                  <li><input type="password" id="inputpassword" type="text"  placeholder="Password" >
+                  </li>
+                  <li><a class="myaccount" onclick="checkloginfunction()" >Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Top Nav End -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- PORTFOLIO BLOCK -->
+	<div ng-app="myCoupon" ng-controller="couponCtrl" ng-init="init()" class="container portfolio-block">
+	  <div class="row">
+	    <div id="container" class="clickable variable-sizes clearfix">
+	      <h1>Coupons</h1>
+	      <div class="couponsRelated">
+	      	<br>
+	        <div class="footprints">
+			  <table>
+			  	<tr>
+			  		<td style="font-size: 30px; padding: 10px; text-align: center"><b>567</b></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="font-size: 20px; padding: 5px; text-align: center">FootPrints</td>
+			  	</tr>
+			  	<tr>
+			  		<td style="font-size: 30px; padding: 10px; text-align: center"><b>30</b></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="font-size: 20px; padding: 5px; text-align: center">Coupon Redeemed</td>
+			  	</tr>
+			  </table>
+	        </div>
+	        <br>
+	        <br>
+	        <div class="couponsFilter">	          
+	          <div class="couponsSelect">
+	            <h2>Filter :</h2>
+	            <p ng-repeat="x in catName" style="font-size: 14px"><input type="checkbox" ng-model="category[x]" ng-click="addfilter()"></input>{{x}}</p>
+	          </div>	  	      
+	  	      <div class="couponsSort">
+	  	      	<h2>Sort By :</h2>
+	  	  	    <p style="font-size: 14px"><input name="sort" type="radio" ng-click="setSort('popular')" >Popularity</input></p>
+	  	  	    <p style="font-size: 14px"><input name="sort" type="radio" ng-click="setSort('postdate')" checked>Posted Date</input></p>
+	  	      </div>
+	  	    </div>
+	  	  </div>
+	      <!-- Portfolio Item -->
+	      <div class="couponsArea">
+	      	<div class="couponsPics">
+	          <div class="coupons " ng-repeat="x in coupons | filter: filterByCats | orderBy:sort | startFrom:currentPage*pageSize | limitTo:pageSize">
+	            <div class="portfolio-item">
+	              <div class="portfolio-item-image image-overlay-{{x.choosed}}" id="{{x.id}}" ng-click="choosen(x.id)"> <a href="#" title={{x.title}}><img src={{x.image}} alt="" /> <span class="overlay-icon item-tick"></span> </a> </div>
+	              <div class="portfolio-item-content">
+	                <h5 class="title"><a href={{x.page}}>{{x.describe}}</a></h5>
+	                <p>Class aptent taciti</p>
+	              </div>
+	            </div>
+	            <br>
+	          </div>
+	    	</div>
+	    	<div class="couponsBottom">
+	          <div class="couponsPage">
+	          	  <span class="pageBlock" ng-click="pageUp()"><a href="#">Prev</a></span>
+	        	  <span class="pageBlock" ng-repeat="x in pages" ng-click="updatePage(x)"><a href="#">{{x}}</a></span>
+	        	  <span class="pageBlock" ng-click="pageDown()"><a href="#">Next</a></span>
+	          </div>
+	        </div>
+	      </div>
+	      <!-- End Portfolio Item --> 
+	    </div>
+	  </div>
+	</div>
+	<!-- END PORTFOLIO BLOCK -->
+<!-- Footer -->
+<footer id="footer">
+  <section class="footersocial">
+    <div class="container">
+      <div class="row">
+        <div class="span3 aboutus">
+          <h2>About Us </h2>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+            <br>
+            t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        </div>
+        <div class="span3 contact">
+          <h2>Contact Us </h2>
+          <ul>
+            <li class="phone"> +123 456 7890, +123 456 7890</li>
+            <li class="mobile"> +123 456 7890, +123 456 78900</li>
+            <li class="email"> test@test.com</li>
+            <li class="email"> test@test.com</li>
+          </ul>
+        </div>
+        <div class="span3">
+          <h2>Site Map </h2>
+          <div id="SiteMap">
+          <p><a href="index.html">Home Page</a></p>
+          <p><a href="category.html">Category</a></p>
+          <p><a href="coupon.html">Coupon</a></p>
+          <p><a href="footprint.html">Footprint</a></p>
+           <p><a href="shop.html">Shop</a></p>
+          </div>
+        </div>
+        <div class="span3">
+          <h2>Facebook </h2>
+          <div id="fb-root"></div>
+          <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
+          <script type="text/javascript">FB.init("");</script>
+          <script type="text/javascript">
+//<![CDATA[
+document.write('<fb:fan profile_id="80655071208" stream="0" connections="6" logobar="0" height="190px"  width="200"css="css/fb.css"></fb:fan> ');
+//]]>
+</script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footerlinks">
+    <div class="container">
+      <div class="info">
+        <ul>
+          <li><a href="#">Privacy Policy</a>
+          </li>
+          <li><a href="#">Terms &amp; Conditions</a>
+          </li>
+          <li><a href="#">Affiliates</a>
+          </li>
+          <li><a href="#">Newsletter</a>
+          </li>
+        </ul>
+      </div>
+      <div id="footersocial">
+        <a href="#" title="Facebook" class="facebook">Facebook</a>
+        <a href="#" title="Twitter" class="twitter">Twitter</a>
+        <a href="#" title="Linkedin" class="linkedin">Linkedin</a>
+        <a href="#" title="rss" class="rss">rss</a>
+        <a href="#" title="Googleplus" class="googleplus">Googleplus</a>
+        <a href="#" title="Skype" class="skype">Skype</a>
+        <a href="#" title="Flickr" class="flickr">Flickr</a>
+      </div>
+    </div>
+  </section>
+  <section class="copyrightbottom">
+    <div class="container">
+      <div class="row">
+        <div class="span6"> All images are copyright to their owners. </div>
+        <div class="span6 textright"> HAKATHON @ 2015 </div>
+      </div>
+    </div>
+  </section>
+  <a id="gotop" href="#">Back to top</a>
+</footer>
+	<!-- JAVASCRIPT --> 
+	<script type="text/javascript">
+		var app = angular.module("myCoupon",[]);
+		app.controller("couponCtrl", function($scope, $http){
+			
+			$scope.coupons = [{
+"id":1234,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe 1.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Cosmetic", 
+"postdate":"11/01/2015", 
+"popular":4},
+{
+"id":1254,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe 2.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Cosmetic", 
+"postdate":"15/01/2015", 
+"popular":2},
+{
+"id":5435,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_nba cafe 1.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Clothing", 
+"postdate":"17/01/2015", 
+"popular":3},
+{
+"id":3245,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe 2.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Salon", 
+"postdate":"13/01/2015", 
+"popular":3},
+{
+"id":6234,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_nba cafe.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Salon", 
+"postdate":"16/01/2015", 
+"popular":1},
+{
+"id":7542,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_nba cafe 1.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Cosmetic", 
+"postdate":"17/01/2015", 
+"popular":4},
+{
+"id":7543,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_s3 cafe 1.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Books", 
+"postdate":"11/01/2015", 
+"popular":5},
+{
+"id":2314,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_s3 cafe 1.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Books", 
+"postdate":"12/01/2015", 
+"popular":4},
+{
+"id":8532,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_s3 cafe 3.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Restaurant", 
+"postdate":"16/01/2015", 
+"popular":3},
+{
+"id":9864,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_s3 cafe 3.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Books", 
+"postdate":"11/01/2015", 
+"popular":4},
+{
+"id":1364,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_s3 cafe 2.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Restaurant", 
+"postdate":"15/01/2015", 
+"popular":2},
+{
+"id":5532,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_s3 cafe.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Leisure", 
+"postdate":"17/01/2015", 
+"popular":3},
+{
+"id":7731,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_s3 cafe.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Cosmetic", 
+"postdate":"13/01/2015", 
+"popular":3},
+{
+"id":1346,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe 2.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Clothing", 
+"postdate":"16/01/2015", 
+"popular":1},
+{
+"id":6567,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Restaurant", 
+"postdate":"17/01/2015", 
+"popular":4},
+{
+"id":3623,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe 3.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Restaurant", 
+"postdate":"11/01/2015", 
+"popular":5},
+{
+"id":6595,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Audio_Equipment", 
+"postdate":"12/01/2015", 
+"popular":4},
+{
+"id":5605,
+"choosed":false, 
+"image":"files/images/portfolio/coupon_fab cafe 3.png", 
+"title":"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus.", 
+"page":"portfolio_single.html", 
+"describe":"Lorem ipsum dolor sit", 
+"category":"Leisure", 
+"postdate":"16/01/2015", 
+"popular":3}];
+
+			//$http.get("http://localhost/Proteus/html_preview/coupons.json").success(function(response) {$scope.coupons = response;$scope.init();});
+
+			$scope.choosen = function(id){
+				if( ! $('#'+id).hasClass('image-overlay-tick')){
+					var r = confirm("Are You Sure to Select this Coupon ?");
+					if( r == true){
+						for(var i = 0; i < $scope.coupons.length; i++){
+							if( $scope.coupons[i].id == id){
+								$scope.coupons[i].choosed = true;
+							}
+						}
+					}				
+				}
+			};
+
+		    $scope.sort = "postdate";
+		    $scope.setSort = function(type) { $scope.sort = type.toLowerCase(); };
+
+		    $scope.catName = ['Cosmetic','Clothing','Leisure', 'Restaurant', 'Books', 'Audio_Equipment', 'Salon'];		    
+			$scope.selectedCat = $scope.catName;
+		    $scope.category = [{Cosmetic:false, Clothing:false, Leisure:false, Restaurant:false, Books:false, Audio_Equipment:false, Salon:false}];
+		    $scope.filterByCats = function(coupon) {
+		        return ($scope.selectedCat.indexOf(coupon.category) !== -1);
+		    };
+
+		    $scope.currentPage = 0;
+    		$scope.pageSize = 12;
+    		$scope.totalPage = 0;
+			$scope.numberOfPages = function(){
+		        var count = 0;
+		        for( var i = 0; i < $scope.selectedCat.length; i++){
+		        	for(　var k = 0; k < $scope.coupons.length; k++){
+		        		if( $scope.coupons[k].category == $scope.selectedCat[i]){
+		        			count++;
+		        		}
+		        	}
+		        }
+		        $scope.totalPage = Math.ceil( count/$scope.pageSize);                
+		    }
+
+		    $scope.pages = [];
+		    $scope.addPages = function(){
+		    	$scope.pages = [];
+		    	for( var i = 0; i < $scope.totalPage; i++){
+		    		$scope.pages.push(i+1);
+		    	}
+		    }
+		    $scope.updatePage = function(page){
+		    	$scope.currentPage = page - 1;
+		    }
+		    $scope.pageDown = function(){
+		    	if($scope.currentPage < $scope.totalPage-1){
+		    		$scope.currentPage = $scope.currentPage + 1;
+		    	}
+		    }
+		    $scope.pageUp = function(){
+		    	if($scope.currentPage > 0){
+		    		$scope.currentPage = $scope.currentPage - 1;
+		    	}
+		    }
+
+
+		    $scope.addfilter = function(){
+		    	var count = 0;
+		        $scope.selectedCat = [];
+		        for(var i = 0; i < $scope.catName.length; i++){
+		            if($scope.category[$scope.catName[i]]){
+		                $scope.selectedCat.push($scope.catName[i]);
+		            }
+		            else{
+		            	count++;
+		            }
+		        }
+		        if( count == $scope.catName.length){
+		        	$scope.selectedCat = $scope.catName;
+		        }
+		        $scope.numberOfPages();
+		        $scope.addPages();
+		    };
+
+		    $scope.init = function(){
+		        $scope.numberOfPages();
+		        $scope.addPages();
+		    }
+		});
+		app.filter('startFrom', function() {
+		    return function(input, start) {
+		        start = +start; //parse to int
+		        return input.slice(start);
+		    }
+		});
+	</script>
+	<script type="text/javascript">// Slider JS
+					var tpj=jQuery;
+					tpj(document).ready(function() {
+					if (tpj.fn.cssOriginal!=undefined)
+						tpj.fn.css = tpj.fn.cssOriginal;
+						tpj('.fullwidthbanner').revolution(
+							{
+								delay:9000,
+								startwidth:960,
+								startheight:500,
+
+								onHoverStop:"on",						// Stop Banner Timet at Hover on Slide on/off
+
+								thumbWidth:100,							// Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+								thumbHeight:50,
+								thumbAmount:3,
+
+								hideThumbs:200,
+								navigationType:"none",					//bullet, thumb, none, both	 (No Shadow in Fullwidth Version !)
+								navigationArrows:"verticalcentered",		//nexttobullets, verticalcentered, none
+								navigationStyle:"round",				//round,square,navbar
+
+								touchenabled:"on",						// Enable Swipe Function : on/off
+								navOffsetHorizontal:0,
+								navOffsetVertical:20,
+								stopAtSlide:-1,							// Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+								stopAfterLoops:-1,						// Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+
+								hideCaptionAtLimit:0,					// It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+								hideAllCaptionAtLilmit:0,				// Hide all The Captions if Width of Browser is less then this value
+								hideSliderAtLimit:0,					// Hide the whole slider, and stop also functions if Width of Browser is less than this value
+								fullWidth:"on",
+								shadow:0								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+							});
+				});
+				</script> 
+	<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+	<script src="files/js/jquery.min.js"></script> 
+	<script src="files/js/jquery.infieldlabel.min.js"></script> 
+	<script src="files/js/scripts.js"></script>
+	<script src="files/js/app.js"></script> 	
+</body>
+</html>

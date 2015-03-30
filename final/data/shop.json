@@ -1,0 +1,86 @@
+[
+  {
+    "image":"http://www.goupmall.com/shop_files/s926/photo/400x267/P1_z1348479063.jpg",
+    "name":"Touch Hair Salon",
+    "address":"香港銅鑼灣怡和街 56-58 號新基商業大廈 20 樓",
+    "category":"cosmetic",
+    "region":"銅鑼灣"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s835/photo/400x267/P1_w1337358297.jpg",
+    "name":"仙姿美容有限公司 Fairy Beauty Company Limited",
+    "address":"香港北角渣華道 18 號嘉匯商業大廈 2206 室",
+    "category":"cosmetic",
+    "region":"北角"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s126/photo/400x267/Ambience_P1.jpg",
+    "name":"Yammi Spa & Massage",
+    "address":"香港灣仔灣仔道 201-203 號偉希大廈閣樓 A 室",
+    "category":"cosmetic",
+    "region":"灣仔灣"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s326/photo/400x267/Sabaidee_P1_x1317024350.jpg",
+    "name":"泰莉古法按摩中心",
+    "address":"香港銅鑼灣耀華街 25 號丹納中心 18 樓 A 室",
+    "category":"cosmetic",
+    "region":"銅鑼灣"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s142/photo/400x267/IvyNail_P1_q1311244037.jpg",
+    "name":"Ivy Nail",
+    "address":"九龍尖沙咀加拿芬道 41-43 號 SOLO Building 9 樓 901 室",
+    "category":"cosmetic",
+    "region":"尖沙咀"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s72/photo/400x267/CoverHairSalon_P1.jpg",
+    "name":"Cover Hair Salon",
+    "address":"香港銅鑼灣駱克道 501 號 1 樓",
+    "category":"cosmetic",
+    "region":"銅鑼灣"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s820/photo/400x267/P1_h1336182661.jpg",
+    "name":"Hipster Nail Salon",
+    "address":"九龍尖沙咀海防道 34 號寶豐大廈 4 樓 A 室",
+    "category":"cosmetic",
+    "region":"尖沙咀"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s522/photo/400x267/CH_P1_p1321616463.jpg",
+    "name":"C&H Beauty Parlor",
+    "address":"九龍九龍灣臨興街 32 號美羅中心一期 7 樓 21 室",
+    "category":"cosmetic",
+    "region":"九龍灣"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s779/photo/400x267/JoeysNail_2_x1334305888.jpg",
+    "name":"Joey's Nail",
+    "address":"香港北角英皇道 343 號迷你工作坊 2 樓 277-278 室",
+    "category":"cosmetic",
+    "region":"北角英"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s182/photo/400x267/Kesmoe_P1_z1315741290.jpg",
+    "name":"Kesmoe N.I.H.",
+    "address":"九龍尖沙咀加拿芬道 41-43 號 SOLO Building 1 樓 118 號舖",
+    "category":"cosmetic",
+    "region":"尖沙咀"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s318/photo/400x267/Minimona_P1_o1317027322.jpg",
+    "name":"Minimona Beauty",
+    "address":"九龍九龍灣臨興街 21 號美羅中心二期 2 樓 35 室",
+    "category":"cosmetic",
+    "region":"九龍灣"
+  },
+  {
+    "image":"http://www.goupmall.com/shop_files/s923/photo/400x267/P1_n1346644218.jpg",
+    "name":"Susucoup Fashion & Nail",
+    "address":"香港中環閣麟街 10-16 號致發大厦 3 樓 301 & 303 室",
+    "category":"cosmetic",
+    "region":"中環"
+  }
+]

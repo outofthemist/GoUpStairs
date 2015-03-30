@@ -1,0 +1,28 @@
+<div class="row"> 
+
+  <div class="span12">
+    <nav class="subnav">
+      <ul class="nav-pills categorymenu" ng-repeat="category in categories" style="float:left;">
+        <li><a ng-click="">{{category.name}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="span12" id="map" style="height: 450px;"></div>
+  {{}}
+  <section>
+    <div class="span6"> 
+    <h2><span>Most Visited in 30 Days</span></h2>
+    <ul class="listoption4" ng-repeat="mostvisitedshop in mostvisitedshops">
+      <li><a href="shop/{{mostvisitedshop.name}}">{{mostvisitedshop.name}}</a></li>
+    </ul>
+    </div>
+    <div class="span6">
+     <h2><span>Haven't Visited</span></h2>
+     <ul class="listoption4" ng-repeat="notvistedshop in notvistedshops">
+       <li><a href="shop/{{notvistedshop.name}}">{{notvistedshop.name}}</a></li>
+     </ul>   
+    </div>   
+  </div>
+  </section>
+</div>
